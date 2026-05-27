@@ -92,11 +92,27 @@
       border-radius:999px;
       transition:0.25s ease;
       font-size:0.95rem;
+      cursor:pointer;
     }
 
     .button:hover{
       background:#c7ad94;
       transform:translateY(-2px);
+    }
+
+    /* MESSAGE DRÔLE */
+    .message{
+      margin-top:25px;
+      font-size:1rem;
+      color:#8b6f56;
+      opacity:0;
+      transform:translateY(10px);
+      transition:0.4s ease;
+    }
+
+    .message.show{
+      opacity:1;
+      transform:translateY(0);
     }
 
     footer{
@@ -147,13 +163,27 @@
         Des vêtements conçus pour résister à toute épreuve de la vie avec classe et élégance, comme Maud notre maud'èle. 
       </p>
 
-      <a href="#" class="button">Découvrir</a>
+      <a href="#" class="button" id="discoverBtn">Recevoir le maud d'emploi</a>
+
+      <div class="message" id="funMessage">
+        Bravo vous venez d'atteindre un nouveau maud de vie 
+      </div>
     </section>
   </main>
 
   <footer>
     Maud - Camille - Lilian - Fanny
   </footer>
+
+  <script>
+    const btn = document.getElementById("discoverBtn");
+    const message = document.getElementById("funMessage");
+
+    btn.addEventListener("click", function(e){
+      e.preventDefault();
+      message.classList.toggle("show");
+    });
+  </script>
 
 </body>
 </html>
