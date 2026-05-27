@@ -141,29 +141,79 @@
   <script>
     function showFannyJoke() {
       const jokes = [
-        "😆 Fanny ? Plus drôle qu’un Funny pack !",
-        "😂 Fanny a voulu faire du yoga… maintenant c’est une Fan-ninja.",
-        "🤣 Quand Fanny cuisine, ça devient Fan-tastique !",
-        "🎤 Fanny chante tellement fort que Spotify demande un autographe."
+        "😂 Fanny rit avant même de comprendre la blague… et parfois elle ne comprend jamais.",
+        "🍕 Fanny dit toujours 'je mange rien ce soir' puis commande pour 14 personnes.",
+        "📸 Fanny ouvre l’appareil photo juste pour regarder si elle est toujours incroyable.",
+        "😭 Fanny perd son téléphone alors qu’il est dans sa main depuis 10 minutes.",
+        "🎤 Fanny chante faux avec tellement de confiance que ça devient impressionnant.",
+        "🛒 Fanny va acheter du pain et revient avec une plante, des chips et un plaid.",
+        "🤣 Fanny dit 'je suis prête dans 2 minutes'… mensonge détecté.",
+        "💅 Fanny transforme un simple bonjour en épisode de télénovela.",
+        "⚡ Fanny peut tomber en marchant sur du plat. Talent naturel.",
+        "😎 Fanny met des lunettes de soleil quand il pleut pour le style."
       ];
-
       const random = jokes[Math.floor(Math.random() * jokes.length)];
       alert(random);
     }
 
     function lilianMode() {
       document.body.style.background = 'linear-gradient(135deg,#00c9ff,#92fe9d)';
-      alert('🕺 Lilian active le mode Disco Deluxe !');
+
+      const bullyQuotes = [
+        "💀 Lilian répond 'ok' aux pavés juste pour voir les gens souffrir.",
+        "😂 Lilian roast tellement fort que même le micro a demandé une pause.",
+        "📱 Lilian laisse les gens en vu… puis répond 3 semaines après avec 'désolé j’étais occupé'.",
+        "🔥 Lilian peut transformer un compliment en humiliation en 0,2 seconde.",
+        "😎 Lilian regarde les disputes comme une série Netflix premium.",
+        "🪑 Lilian a déjà clash une chaise parce qu’elle grinçait trop fort.",
+        "🚨 Quand Lilian dit 'j’ai une idée', tout le monde verrouille son téléphone.",
+        "🤣 Lilian a tellement trollé Fanny qu’elle a failli faire une mise à jour système.",
+        "🎤 Lilian parle comme si chaque phrase devait finir dans un TikTok.",
+        "💥 Lilian a un talent rare : mettre le malaise ET faire rire en même temps."
+      ];
+
+      const random = bullyQuotes[Math.floor(Math.random() * bullyQuotes.length)];
+      alert(random);
     }
 
     function maudMode() {
       document.body.style.background = 'linear-gradient(135deg,#ff758c,#ff7eb3)';
-      alert('🚀 Maud vient de lancer une aventure intergalactique !');
+
+      const maudQuotes = [
+        "🚀 Maud entre dans une pièce comme un boss final de jeu vidéo.",
+        "😂 Maud peut rendre un trajet de 5 minutes dangereux et légendaire.",
+        "🍟 Maud dit 'je goûte juste une frite' puis termine ton menu entier.",
+        "📱 Maud envoie des vocaux de 8 minutes pour dire 'ok'.",
+        "😭 Maud oublie pourquoi elle est entrée dans la pièce… à chaque fois.",
+        "🎬 La vie de Maud ressemble à une série écrite à 3h du matin.",
+        "⚡ Même Google Maps abandonne avec Maud.",
+        "🛸 Les extraterrestres ont essayé de comprendre Maud… ils sont repartis.",
+        "🤣 Maud transforme chaque problème en anecdote drôle 5 minutes après.",
+        "💥 Maud est la seule personne capable de perdre un objet déjà dans sa poche."
+      ];
+
+      const random = maudQuotes[Math.floor(Math.random() * maudQuotes.length)];
+      alert(random);
     }
 
     function camilleMode() {
       document.body.style.background = 'linear-gradient(135deg,#ffd700,#ffb347)';
-      alert('👑 Toute la team s’incline devant la reine Camille !');
+
+      const queenQuotes = [
+        "👑 Camille parle une fois et tout le monde agit comme si c’était une conférence TED.",
+        "✨ Camille est tellement reine que même les bugs du site disparaissent devant elle.",
+        "😂 Camille peut arriver en retard ET recevoir des applaudissements.",
+        "📸 Les appareils photo se mettent automatiquement en mode beauté quand Camille approche.",
+        "💅 Camille dit 'c’est pas grave' mais tout le monde sait qu’il faut paniquer.",
+        "🌟 Camille marche comme si une équipe de montage ajoutait des ralentis derrière elle.",
+        "😎 Même Lilian baisse d’un ton quand Camille arrive.",
+        "🎤 Camille peut demander l’heure et recevoir une standing ovation.",
+        "🏆 Camille gagne des disputes qu’elle n’a même pas commencées.",
+        "👑 Officiellement : Camille dirige ce groupe avec 98% de charisme et 2% de menace."
+      ];
+
+      const random = queenQuotes[Math.floor(Math.random() * queenQuotes.length)];
+      alert(random);
 
       const crown = document.createElement('div');
       crown.innerHTML = '✨👑✨';
