@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal Élégant</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: "Inter", sans-serif;
+      background:#f7f4ef;
+      color:#2f2f2f;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    header{
+      width:100%;
+      padding:28px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:1.1rem;
+      letter-spacing:2px;
+      font-weight:600;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#5f5f5f;
+      margin-left:28px;
+      font-size:0.95rem;
+      transition:0.2s ease;
+    }
+
+    nav a:hover{
+      color:#000;
+    }
+
+    main{
+      flex:1;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px;
+    }
+
+    .container{
+      background:rgba(255,255,255,0.7);
+      border:1px solid #e7e0d7;
+      border-radius:32px;
+      padding:70px;
+      max-width:720px;
+      width:100%;
+      text-align:center;
+
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.04);
+    }
+
+    h1{
+      font-size:4rem;
+      font-weight:500;
+      margin-bottom:24px;
+      letter-spacing:-2px;
+    }
+
+    p{
+      color:#6b6b6b;
+      line-height:1.8;
+      font-size:1.05rem;
+      max-width:500px;
+      margin:0 auto 40px;
+    }
+
+    .button{
+      display:inline-block;
+      text-decoration:none;
+      color:#fff;
+      background:#d6bfa9;
+      padding:14px 30px;
+      border-radius:999px;
+      transition:0.25s ease;
+      font-size:0.95rem;
+    }
+
+    .button:hover{
+      background:#c7ad94;
+      transform:translateY(-2px);
+    }
+
+    footer{
+      padding:30px;
+      text-align:center;
+      color:#9a9a9a;
+      font-size:0.9rem;
+    }
+
+    @media (max-width:700px){
+
+      header{
+        padding:24px;
+      }
+
+      .container{
+        padding:45px 30px;
+      }
+
+      h1{
+        font-size:2.8rem;
+      }
+
+      nav{
+        display:none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">ATELIER</div>
+
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Collection</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container">
+      <h1>Simple & délicat</h1>
+
+      <p>
+        Une base minimaliste avec des tons doux et une ambiance élégante,
+        parfaite pour un portfolio, une boutique ou une landing page.
+      </p>
+
+      <a href="#" class="button">Découvrir</a>
+    </section>
+  </main>
+
+  <footer>
+    Minimal template — 2026
+  </footer>
+
+</body>
+</html>
