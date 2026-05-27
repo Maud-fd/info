@@ -180,16 +180,16 @@
       document.body.style.background = 'linear-gradient(135deg,#ff758c,#ff7eb3)';
 
       const maudQuotes = [
-        "🚀 Maud entre dans une pièce comme un boss final de jeu vidéo.",
-        "😂 Maud peut rendre un trajet de 5 minutes dangereux et légendaire.",
-        "🍟 Maud dit 'je goûte juste une frite' puis termine ton menu entier.",
-        "📱 Maud envoie des vocaux de 8 minutes pour dire 'ok'.",
-        "😭 Maud oublie pourquoi elle est entrée dans la pièce… à chaque fois.",
-        "🎬 La vie de Maud ressemble à une série écrite à 3h du matin.",
-        "⚡ Même Google Maps abandonne avec Maud.",
-        "🛸 Les extraterrestres ont essayé de comprendre Maud… ils sont repartis.",
-        "🤣 Maud transforme chaque problème en anecdote drôle 5 minutes après.",
-        "💥 Maud est la seule personne capable de perdre un objet déjà dans sa poche."
+        "💔 Maud dit que les bons mecs n’existent pas… puis retourne parler à un red flag avec une casquette.",
+        "😭 Maud tombe amoureuse plus vite que sa batterie descend.",
+        "📱 Maud bloque un mec… puis stalke son profil 14 secondes après.",
+        "🚩 Le type préféré de Maud ? Les problèmes avec abonnement illimité.",
+        "😂 Maud dit 'plus jamais les hommes' au moins 3 fois par semaine.",
+        "💀 Maud peut détecter un homme toxique… et quand même répondre 'mdrrr'.",
+        "🎬 La vie amoureuse de Maud ressemble à une série Netflix annulée après une saison.",
+        "📞 Maud donne des conseils amoureux incroyables… mais ne les applique jamais.",
+        "😭 Maud cherche un prince charmant dans une génération qui répond 'wsh'.",
+        "🚨 Maud dit que tous les mecs sont pareils mais continue d’en choisir des pires à chaque mise à jour."
       ];
 
       const random = maudQuotes[Math.floor(Math.random() * maudQuotes.length)];
@@ -230,8 +230,11 @@
 
     const cards = document.querySelectorAll('.card');
 
-    
-
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        alert('🤣 ' + card.querySelector('.name').innerText + ' vient de déclencher le mode fou rire !');
+      });
+    });
   </script>
 
 </body>
