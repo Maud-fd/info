@@ -140,8 +140,10 @@
     const p1 = urlParams.get('p1') || "Inconnu 1";
     const p2 = urlParams.get('p2') || "Inconnu 2";
 
-    const q1 = sessionStorage.getItem('clashQ1') || "Je n'ai rien à dire, je suis parfait(e).";
-    const q2 = sessionStorage.getItem('clashQ2') || "Moi non plus, on s'aime trop.";
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const q1 = urlParams.get('q1') || "Je n'ai rien à dire, je suis parfait(e).";
+    const q2 = urlParams.get('q2') || "Moi non plus, on s'aime trop.";
 
     // 2. Afficher les noms et préparer les textes
     document.getElementById('name1').innerText = p1;
