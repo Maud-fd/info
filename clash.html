@@ -11,77 +11,164 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       font-family: Arial, sans-serif;
       background: radial-gradient(circle, #2b0000, #000000);
       color: white;
       text-align: center;
+      overflow: hidden;
     }
+
     h1 {
-      font-size: 4em;
+      margin-top: 50px;
+      font-size: 3.5em;
       color: #ff4f81;
       text-transform: uppercase;
       text-shadow: 0 0 20px #ff4f81, 0 0 40px #ff0000;
-      margin-bottom: 10px;
+      animation: fadeInDown 1s ease;
     }
-    .versus-container {
+
+    .arena {
       display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1000px;
+      margin-top: 50px;
+      flex: 1;
+    }
+
+    .fighter-box {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 50px;
-      font-size: 3em;
+    }
+
+    .fighter-name {
+      font-size: 2.5em;
       font-weight: bold;
-    }
-    .fighter {
       background: rgba(255, 255, 255, 0.1);
-      padding: 30px 50px;
-      border-radius: 15px;
+      padding: 15px 30px;
+      border-radius: 10px;
       border: 2px solid white;
-      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+      margin-bottom: 20px;
     }
+
     .vs {
-      font-size: 1.5em;
+      font-size: 3em;
       color: #ffcc00;
-      text-shadow: 0 0 10px #ffcc00;
+      font-weight: bold;
+      margin-top: 20px;
+      text-shadow: 0 0 20px #ffcc00;
       animation: pulse 1s infinite;
     }
-    .back-btn {
-      margin-top: 50px;
-      padding: 15px 30px;
-      font-size: 1.2em;
+
+    /* Style des bulles de dialogue */
+    .bubble {
       background: white;
       color: black;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
+      font-size: 1.3em;
       font-weight: bold;
+      padding: 20px;
+      border-radius: 20px;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
+
+    .bubble::after {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      margin-left: -15px;
+      border-width: 0 15px 15px;
+      border-style: solid;
+      border-color: transparent transparent white transparent;
+    }
+
+    /* Classe pour déclencher l'apparition */
+    .show-bubble {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .status-text {
+      position: absolute;
+      bottom: 30px;
+      font-size: 1.2em;
+      color: #aaa;
+    }
+
     @keyframes pulse {
       0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.3); }
+      50% { transform: scale(1.2); }
+    }
+    
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <h1>L'Heure du Clash a sonné !</h1>
+  <h1>⚔️ BATTLE ROYALE ⚔️</h1>
   
-  <div class="versus-container">
-    <div class="fighter" id="fighter1">Joueur 1</div>
+  <div class="arena">
+    <div class="fighter-box">
+      <div class="fighter-name" id="name1">Joueur 1</div>
+      <div class="bubble" id="bubble1">...</div>
+    </div>
+
     <div class="vs">VS</div>
-    <div class="fighter" id="fighter2">Joueur 2</div>
+
+    <div class="fighter-box">
+      <div class="fighter-name" id="name2">Joueur 2</div>
+      <div class="bubble" id="bubble2">...</div>
+    </div>
   </div>
 
-  <button class="back-btn" onclick="window.location.href='index.html'">Retour à la base</button>
+  <div class="status-text" id="status">Préparation du ring...</div>
 
   <script>
-    // Récupérer les noms depuis l'URL (ex: ?p1=Lilian&p2=Maud)
+    // 1. Récupérer les données
     const urlParams = new URLSearchParams(window.location.search);
     const p1 = urlParams.get('p1') || "Inconnu 1";
     const p2 = urlParams.get('p2') || "Inconnu 2";
 
-    // Afficher les noms
-    document.getElementById('fighter1').innerText = p1;
-    document.getElementById('fighter2').innerText = p2;
+    const q1 = sessionStorage.getItem('clashQ1') || "Je n'ai rien à dire, je suis parfait(e).";
+    const q2 = sessionStorage.getItem('clashQ2') || "Moi non plus, on s'aime trop.";
+
+    // 2. Afficher les noms et préparer les textes
+    document.getElementById('name1').innerText = p1;
+    document.getElementById('name2').innerText = p2;
+    document.getElementById('bubble1').innerText = q1;
+    document.getElementById('bubble2').innerText = q2;
+
+    const statusText = document.getElementById('status');
+
+    // 3. Séquence d'animation temporelle
+    setTimeout(() => {
+      statusText.innerText = `${p1} lance les hostilités !`;
+      document.getElementById('bubble1').classList.add('show-bubble');
+    }, 1500); // 1.5 secondes : P1 parle
+
+    setTimeout(() => {
+      statusText.innerText = `${p2} réplique violemment !`;
+      document.getElementById('bubble2').classList.add('show-bubble');
+    }, 4500); // 4.5 secondes : P2 parle
+
+    setTimeout(() => {
+      statusText.innerText = `Fin du clash ! Retour au menu...`;
+    }, 8500); // 8.5 secondes : Message de fin
+
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 10000); // 10 secondes : Redirection automatique
   </script>
 
 </body>
