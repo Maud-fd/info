@@ -234,8 +234,8 @@
         const q2 = allQuotes[f2][Math.floor(Math.random() * allQuotes[f2].length)];
 
         // Sauvegarde dans le navigateur pour la page clash
-        sessionStorage.setItem('clashQ1', q1);
-        sessionStorage.setItem('clashQ2', q2);
+        window.location.href =
+  `clash.html?p1=${encodeURIComponent(f1)}&p2=${encodeURIComponent(f2)}&q1=${encodeURIComponent(q1)}&q2=${encodeURIComponent(q2)}`;
 
         setTimeout(() => {
           // Redirection
