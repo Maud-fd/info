@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projet Info</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Inter, sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#f7f4ef,#ffe9d6,#ffd9ec);
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    text-align:center;
+}
+
+h1{
+    font-size:4rem;
+    margin-bottom:15px;
+    color:#333;
+}
+
+.subtitle{
+    color:#666;
+    margin-bottom:60px;
+    font-size:1.1rem;
+}
+
+.cards{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:420px;
+    padding:40px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.emoji{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#222;
+}
+
+.card p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:999px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+.maud{
+    background:#d6bfa9;
+}
+
+.maud:hover{
+    background:#c4aa90;
+}
+
+.team{
+    background:#ff5f95;
+}
+
+.team:hover{
+    background:#e34a7e;
+}
+
+footer{
+    margin-top:50px;
+    color:#888;
+}
+
+@media(max-width:900px){
+    h1{
+        font-size:2.8rem;
+    }
+
+    .card{
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>✨ Bienvenue ✨</h1>
+
+    <p class="subtitle">
+        Choisissez votre destination et plongez dans l'univers de notre projet.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="emoji">👗</div>
+
+            <h2>Maud de Vie</h2>
+
+            <p>
+                Découvrez une collection de vêtements conçus pour affronter
+                toutes les épreuves de la vie avec style, élégance et une touche d'humour.
+            </p>
+
+            <a href="mauddevie.html" class="btn maud">
+                Entrer dans Maud de Vie
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">👑</div>
+
+            <h2>Le Royaume Infernalement Drôle</h2>
+
+            <p>
+                Rencontrez Camille, Fanny, Maud et Lilian dans un univers rempli
+                de blagues, de défis et de fous rires garantis.
+            </p>
+
+            <a href="royaume.html" class="btn team">
+                Rejoindre la Team
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        Projet Info • Maud • Camille • Lilian • Fanny
+    </footer>
+
+</div>
+
+</body>
+</html>
