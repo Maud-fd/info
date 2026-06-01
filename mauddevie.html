@@ -1,242 +1,187 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Team de Choc</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Projet info </title>
+
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
-      overflow: hidden;
-      color: white;
-      text-align: center;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    h1 {
-      margin-top: 40px;
-      font-size: 3em;
-      animation: bounce 2s infinite;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+    body{
+      font-family: "Inter", sans-serif;
+      background:#f7f4ef;
+      color:#2f2f2f;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
     }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 60px;
-      flex-wrap: wrap;
+    header{
+      width:100%;
+      padding:28px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
     }
 
-    .card {
-      background: rgba(255,255,255,0.2);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 25px;
-      width: 220px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-      cursor: pointer;
+    .logo{
+      font-size:1.1rem;
+      letter-spacing:2px;
+      font-weight:600;
     }
 
-    .card:hover {
-      transform: scale(1.1) rotate(3deg);
+    nav a{
+      text-decoration:none;
+      color:#5f5f5f;
+      margin-left:28px;
+      font-size:0.95rem;
+      transition:0.2s ease;
     }
 
-    .fun-btn {
-      margin-top: 15px;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 12px;
-      background: white;
-      color: #ff4f81;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
+    nav a:hover{
+      color:#000;
     }
 
-    .fun-btn:hover {
-      transform: scale(1.1);
-      background: #ffe5ec;
+    main{
+      flex:1;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px;
     }
 
-    .name {
-      font-size: 2em;
-      margin-bottom: 10px;
+    .container{
+      background:rgba(255,255,255,0.7);
+      border:1px solid #e7e0d7;
+      border-radius:32px;
+      padding:70px;
+      max-width:720px;
+      width:100%;
+      text-align:center;
+
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.04);
     }
 
-    .desc {
-      font-size: 1.1em;
+    h1{
+      font-size:4rem;
+      font-weight:500;
+      margin-bottom:24px;
+      letter-spacing:-2px;
     }
 
-    .emoji {
-      font-size: 3em;
-      margin-bottom: 10px;
-      animation: spin 5s linear infinite;
+    p{
+      color:#6b6b6b;
+      line-height:1.8;
+      font-size:1.05rem;
+      max-width:500px;
+      margin:0 auto 40px;
     }
 
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    .button{
+      display:inline-block;
+      text-decoration:none;
+      color:#fff;
+      background:#d6bfa9;
+      padding:14px 30px;
+      border-radius:999px;
+      transition:0.25s ease;
+      font-size:0.95rem;
+      cursor:pointer;
     }
 
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    .button:hover{
+      background:#c7ad94;
+      transform:translateY(-2px);
     }
 
-    .footer {
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
-      font-size: 1.2em;
-      animation: blink 1.5s infinite;
+    /* MESSAGE DRÔLE */
+    .message{
+      margin-top:25px;
+      font-size:1rem;
+      color:#8b6f56;
+      opacity:0;
+      transform:translateY(10px);
+      transition:0.4s ease;
     }
 
-    @keyframes blink {
-      50% { opacity: 0.3; }
+    .message.show{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    footer{
+      padding:30px;
+      text-align:center;
+      color:#9a9a9a;
+      font-size:0.9rem;
+    }
+
+    @media (max-width:700px){
+
+      header{
+        padding:24px;
+      }
+
+      .container{
+        padding:45px 30px;
+      }
+
+      h1{
+        font-size:2.8rem;
+      }
+
+      nav{
+        display:none;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <h1>👑 Bienvenue dans le Royaume Infernalement Drôle 👑</h1>
-  <h2 style="margin-top:-10px; font-size:1.5em;">Sous le règne incontesté de Camille 👑✨</h2>
+  <header>
+    <div class="logo">MAUD DE VIE</div>
 
-  <div class="container">
-    <div class="card" onclick="lilianMode()">
-      <div class="emoji">🕺</div>
-      <div class="name">Lilian</div>
-      <div class="desc">Expert officiel des blagues nulles mais hilarantes.</div>
-      <button class="fun-btn">Activer le mode Disco</button>
-    </div>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Collection</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-    <div class="card" onclick="showFannyJoke()">
-      <div class="emoji">😂</div>
-      <div class="name">Fanny</div>
-      <div class="desc">La reine des jeux de mots Fannytastiques.</div>
-      <button class="fun-btn">Clique pour une Fannnerie</button>
-    </div>
+  <main>
+    <section class="container">
+      <h1>Maud de vie</h1>
 
-    <div class="card" onclick="maudMode()">
-      <div class="emoji">🚀</div>
-      <div class="name">Maud</div>
-      <div class="desc">Toujours prête à transformer une soirée calme en aventure épique.</div>
-      <button class="fun-btn">Lancer l’aventure</button>
-    </div>
+      <p>
+        Des vêtements conçus pour résister à toute épreuve de la vie avec classe et élégance, comme Maud notre maud'èle. 
+      </p>
 
-    <div class="card" onclick="camilleMode()">
-      <div class="emoji">👑</div>
-      <div class="name">Camille</div>
-      <div class="desc">La reine suprême du groupe. Même Google demande son avis avant une recherche.</div>
-      <button class="fun-btn">Saluer la reine</button>
-    </div>
-  </div>
+      <a href="#" class="button" id="discoverBtn">Recevoir le maud d'emploi</a>
 
-  <div class="footer">
-    ⚡ Attention : trop de fun peut provoquer des fous rires incontrôlables ⚡
-  </div>
+      <div class="message" id="funMessage">
+        Bravo vous venez d'atteindre un nouveau maud de vie 
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Maud - Camille - Lilian - Fanny
+  </footer>
 
   <script>
-    function showFannyJoke() {
-      const jokes = [
-        "😂 Fanny rit avant même de comprendre la blague… et parfois elle ne comprend jamais.",
-        "🍕 Fanny dit toujours 'je mange rien ce soir' puis commande pour 14 personnes.",
-        "📸 Fanny ouvre l’appareil photo juste pour regarder si elle est toujours incroyable.",
-        "😭 Fanny perd son téléphone alors qu’il est dans sa main depuis 10 minutes.",
-        "🎤 Fanny chante faux avec tellement de confiance que ça devient impressionnant.",
-        "🛒 Fanny va acheter du pain et revient avec une plante, des chips et un plaid.",
-        "🤣 Fanny dit 'je suis prête dans 2 minutes'… mensonge détecté.",
-        "💅 Fanny transforme un simple bonjour en épisode de télénovela.",
-        "⚡ Fanny peut tomber en marchant sur du plat. Talent naturel.",
-        "😎 Fanny met des lunettes de soleil quand il pleut pour le style."
-      ];
-      const random = jokes[Math.floor(Math.random() * jokes.length)];
-      alert(random);
-    }
+    const btn = document.getElementById("discoverBtn");
+    const message = document.getElementById("funMessage");
 
-    function lilianMode() {
-      document.body.style.background = 'linear-gradient(135deg,#00c9ff,#92fe9d)';
-
-      const bullyQuotes = [
-        "💀 Lilian répond 'ok' aux pavés juste pour voir les gens souffrir.",
-        "😂 Lilian roast tellement fort que même le micro a demandé une pause.",
-        "📱 Lilian laisse les gens en vu… puis répond 3 semaines après avec 'désolé j’étais occupé'.",
-        "🔥 Lilian peut transformer un compliment en humiliation en 0,2 seconde.",
-        "😎 Lilian regarde les disputes comme une série Netflix premium.",
-        "🪑 Lilian a déjà clash une chaise parce qu’elle grinçait trop fort.",
-        "🚨 Quand Lilian dit 'j’ai une idée', tout le monde verrouille son téléphone.",
-        "🤣 Lilian a tellement trollé Fanny qu’elle a failli faire une mise à jour système.",
-        "🎤 Lilian parle comme si chaque phrase devait finir dans un TikTok.",
-        "💥 Lilian a un talent rare : mettre le malaise ET faire rire en même temps."
-      ];
-
-      const random = bullyQuotes[Math.floor(Math.random() * bullyQuotes.length)];
-      alert(random);
-    }
-
-    function maudMode() {
-      document.body.style.background = 'linear-gradient(135deg,#ff758c,#ff7eb3)';
-
-      const maudQuotes = [
-        "💔 Maud dit que les bons mecs n’existent pas… puis retourne parler à un red flag avec une casquette.",
-        "😭 Maud tombe amoureuse plus vite que sa batterie descend.",
-        "📱 Maud bloque un mec… puis stalke son profil 14 secondes après.",
-        "🚩 Le type préféré de Maud ? Les problèmes avec abonnement illimité.",
-        "😂 Maud dit 'plus jamais les hommes' au moins 3 fois par semaine.",
-        "💀 Maud peut détecter un homme toxique… et quand même répondre 'mdrrr'.",
-        "🎬 La vie amoureuse de Maud ressemble à une série Netflix annulée après une saison.",
-        "📞 Maud donne des conseils amoureux incroyables… mais ne les applique jamais.",
-        "😭 Maud cherche un prince charmant dans une génération qui répond 'wsh'.",
-        "🚨 Maud dit que tous les mecs sont pareils mais continue d’en choisir des pires à chaque mise à jour."
-      ];
-
-      const random = maudQuotes[Math.floor(Math.random() * maudQuotes.length)];
-      alert(random);
-    }
-
-    function camilleMode() {
-      document.body.style.background = 'linear-gradient(135deg,#ffd700,#ffb347)';
-
-        const queenQuotes = [
-        "💀 Camille est une femme… mais l’énergie qu’elle dégage c’est Gérard 48 ans au PMU.",
-        "😂 Camille dit ‘frérot’ à tout le monde avec plus de conviction que les vrais hommes.",
-        "🏋️ Camille a tellement une vibe de mec qu’on s’attend à la voir donner des conseils crypto non sollicités.",
-        "📱 Camille répond ‘ok chef’ comme un père divorcé sur WhatsApp.",
-        "🚬 Camille pourrait dire ‘le foot c’était mieux avant’ sans même ironiser.",
-        "😭 Camille rigole comme un oncle bourré à un barbecue dès qu’il y a une vanne un peu nulle.",
-        "🚨 Camille est la seule meuf qui peut avoir une posture de videur de boîte au repos.",
-        "💀 Quand Camille dit ‘wesh mon reuf’, même les hommes se sentent intimidés.",
-        "🎮 Camille a une énergie de gars qui rage sur FIFA et tape dans sa table.",
-        "😂 Camille pourrait ouvrir un podcast masculiniste juste pour ‘rigoler un peu’.",
-        "📞 Camille donne des conseils amoureux comme un pote mec qui comprend rien aux émotions.",
-        "🚩 Camille est à deux phrases de dire ‘les femmes aiment trop les bad boys’ premier degré."
-
-      ];
-
-      const random = queenQuotes[Math.floor(Math.random() * queenQuotes.length)];
-      alert(random);
-
-      const crown = document.createElement('div');
-      crown.innerHTML = '✨👑✨';
-      crown.style.position = 'fixed';
-      crown.style.top = '20px';
-      crown.style.left = '50%';
-      crown.style.transform = 'translateX(-50%)';
-      crown.style.fontSize = '4em';
-      crown.style.animation = 'bounce 1s infinite';
-      document.body.appendChild(crown);
-
-      setTimeout(() => crown.remove(), 3000);
-    }
-
-    const cards = document.querySelectorAll('.card');
-
-    cards.forEach(card => {
-      card.addEventListener('click', () => {
-        alert('🤣 ' + card.querySelector('.name').innerText + ' vient de déclencher le mode fou rire !');
-      });
+    btn.addEventListener("click", function(e){
+      e.preventDefault();
+      message.classList.toggle("show");
     });
   </script>
 
