@@ -109,173 +109,101 @@
 </head>
 <body>
 
-  <h1>👑 Bienvenue dans le Royaume Infernalement Drôle 👑</h1>
-  <h2 style="margin-top:-10px; font-size:1.5em;">Cliquez sur 2 personnes pour lancer un CLASH ! ⚔️</h2>
+<h1>👑 Bienvenue dans le Royaume Infernalement Drôle 👑</h1>
+<h2 style="margin-top:-10px; font-size:1.5em;">Cliquez sur 2 personnes pour lancer un CLASH ! ⚔️</h2>
 
-  <div class="container">
-    <div class="card" onclick="selectFighter(this, 'Lilian')">
-      <div class="emoji">🕺</div>
-      <div class="name">Lilian</div>
-      <div class="desc">Expert officiel des blagues nulles mais hilarantes.</div>
-      <button class="fun-btn" onclick="event.stopPropagation(); triggerAction('Lilian')">Activer le mode Disco</button>
-    </div>
+<div class="container">
 
-    <div class="card" onclick="selectFighter(this, 'Fanny')">
-      <div class="emoji">😂</div>
-      <div class="name">Fanny</div>
-      <div class="desc">La reine des jeux de mots Fannytastiques.</div>
-      <button class="fun-btn" onclick="event.stopPropagation(); triggerAction('Fanny')">Clique pour une Fannnerie</button>
-    </div>
-
-    <div class="card" onclick="selectFighter(this, 'Maud')">
-      <div class="emoji">🚀</div>
-      <div class="name">Maud</div>
-      <div class="desc">Toujours prête à transformer une soirée calme en aventure épique.</div>
-      <button class="fun-btn" onclick="event.stopPropagation(); triggerAction('Maud')">Lancer l’aventure</button>
-    </div>
-
-    <div class="card" onclick="selectFighter(this, 'Camille')">
-      <div class="emoji">👑</div>
-      <div class="name">Camille</div>
-      <div class="desc">La reine suprême. Même Google demande son avis.</div>
-      <button class="fun-btn" onclick="event.stopPropagation(); triggerAction('Camille')">Saluer la reine</button>
-    </div>
+  <div class="card" onclick="selectFighter(this, 'Lilian')">
+    <div class="emoji">🕺</div>
+    <div class="name">Lilian</div>
+    <div class="desc">Expert officiel des blagues nulles mais hilarantes.</div>
+    <button class="fun-btn" onclick="event.stopPropagation(); triggerAction('Lilian')">Activer le mode Disco</button>
   </div>
 
-  <div class="footer">
-    ⚡ Attention : trop de fun peut provoquer des fous rires incontrôlables ⚡
+  <div class="card" onclick="selectFighter(this, 'Fanny')">
+    <div class="emoji">😂</div>
+    <div class="name">Fanny</div>
+    <div class="desc">La reine des jeux de mots Fannytastiques.</div>
+    <button class="fun-btn" onclick="event.stopPropagation(); triggerAction('Fanny')">Clique pour une Fannnerie</button>
   </div>
 
-  <script>
-    // --- DICTIONNAIRE DES CLASHES ---
-    const allQuotes = {
+  <div class="card" onclick="selectFighter(this, 'Maud')">
+    <div class="emoji">🚀</div>
+    <div class="name">Maud</div>
+    <div class="desc">Toujours prête à transformer une soirée calme en aventure épique.</div>
+    <button class="fun-btn" onclick="event.stopPropagation(); triggerAction('Maud')">Lancer l’aventure</button>
+  </div>
+
+  <div class="card" onclick="selectFighter(this, 'Camille')">
+    <div class="emoji">👑</div>
+    <div class="name">Camille</div>
+    <div class="desc">La reine suprême. Même Google demande son avis.</div>
+    <button class="fun-btn" onclick="event.stopPropagation(); triggerAction('Camille')">Saluer la reine</button>
+  </div>
+
+</div>
+
+<div class="footer">
+  ⚡ Attention : trop de fun peut provoquer des fous rires incontrôlables ⚡
+</div>
+
+<script>
+const allQuotes = {
   "Fanny": [
     "😂 Fanny rit avant même de comprendre la blague… et parfois elle ne comprend jamais.",
     "🍕 Fanny dit toujours 'je mange rien ce soir' puis commande pour 14 personnes.",
     "📸 Fanny ouvre l’appareil photo juste pour regarder si elle est toujours incroyable.",
-    "😭 Fanny perd son téléphone alors qu’il est dans sa main depuis 10 minutes.",
-    "🎤 Fanny chante faux avec tellement de confiance que ça devient impressionnant.",
-    "🛒 Fanny va acheter du pain et revient avec une plante, des chips et un plaid.",
-    "🤣 Fanny dit 'je suis prête dans 2 minutes'… mensonge détecté.",
-    "💅 Fanny est capable de créer un doc world sur un gars avec juste son nom.",
-    "⚡ Fanny peut tomber en marchant sur du plat. Talent naturel.",
-    "😎 Fanny met des lunettes de soleil quand il pleut pour le style.",
-    "☕ Quand Fanny dit 'faut que je te raconte un truc', prépare-toi à attendre plus longtemps qu'une série Netflix.",
-    "🧮 Quand Fanny dit 'il est mignon', personne n'ose demander son année de naissance.",
-    "⏰ Fanny est tellement organisée que même son agenda ne sait pas ce qu'elle fait demain.",
-    "🤯 Prévoir un week-end avec Fanny demande plus de planification qu'une mission spatiale.",
-    "🍽️ Fanny lit la carte du restaurant comme d'autres lisent un roman passionnant."
+    "😭 Fanny perd son téléphone alors qu’il est dans sa main depuis 10 minutes."
   ],
-
   "Lilian": [
-    "😴 Lilian a 19 ans mais dors comme si il avait travaillé dans les champs pendant 60 ans.",
-    "🔥 Pour Lilian, la vie a une finalité : le feu purificateur.",
-    "📱 Lilian laisse les gens en vu… puis répond 3 semaines après.",
-    "⚽ Avec ses conquêtes, Lilian pourrait reconstituter une équipe de foot.",
-    "😎 Lilian regarde les disputes comme une série Netflix premium.",
-    "🎵 Ne parlez pas de techno à Lilian si vous ne voulez pas avoir une démo en direct.",
-    "🚨 Quand Lilian dit 'j’ai une idée', tout le monde verrouille son téléphone.",
-    "🎤 Les trajets en voiture avec Lilian, c'est une vrai soirée techno.",
-    "💀 Lilian a besoin d'autant de repos qu'un octagénaire en fin de vie.",
-    "💥 Lilian a un talent rare : mettre le malaise en faisant une blague."
+    "😴 Lilian dort comme un retraité après 3 jobs.",
+    "🔥 Pour Lilian, la vie = chaos contrôlé.",
+    "📱 Lilian répond 3 semaines plus tard."
   ],
-
   "Maud": [
-    "💔 Maud dit que les bons mecs n’existent pas… puis retourne parler à son bouc moustache.",
-    "😭 Quand Maud te regarde tu remets immédiatement tous tes choix de vie en question.",
-    "📱 Maud stalke un mec jusqu'à retrouver tout ses ancêtres... puis bloque son profil 14 secondes après.",
-    "🚩 Le type préféré de Maud ? Les problèmes avec abonnement illimité.",
-    "😂 Maud dit 'plus jamais les hommes' au moins 3 fois par jour.",
-    "💀 Maud te juges en un regard et honnêtement, elle n'a pas toujours tord.",
-    "🎬 L'application infocentre préférée de Maud ? Le trombinoscope.",
-    "🔵 Pas besoin de demander la couleur préférée de Maud, il suffit de la regarder.",
-    "😭 Maud cherche un prince charmant dans une génération qui répond 'wsh'.",
-    "🚨 Maud dit que tous les mecs sont pareils mais continue d’en choisir des pires à chaque mise à jour."
+    "💔 Maud et les red flags = histoire d’amour.",
+    "😭 Maud remet ta vie en question en 0.2s."
   ],
-
   "Camille": [
-    "💀 Camille est une femme… mais l’énergie qu’elle dégage c’est Gérard 48 ans au PMU.",
-    "😂 Camille dit ‘frérot’ à tout le monde avec plus de conviction que les vrais hommes.",
-    "🏋️ Camille a tellement une vibe de mec qu’on s’attend à se prendre des vus sans raison.",
-    "👓 Camille n'a pas de lunettes mais elle reste aveugle dans les deux sens du terme.",
-    "🚬 Camille pourrait dire ‘le foot c’était mieux avant’ sans même ironiser.",
-    "🚨 Camille est la seule meuf qui peut avoir une posture de videur de boîte au repos.",
-    "💀 Camille pense qu'elle gère la situation, mais son sac a failli exploser...",
-    "😂 Camille a 19 ans mais quand elle se baisse, on dirait qu'elle en a 60.",
-    "📞 Quand Camille rentre dans une pièce on la remarque... grâce au bruit que font ses genoux.",
-    "🚩 Camille se dit responsable, puis elle oublie son sac de cours sur le quai d'une gare."
+    "💀 Camille = énergie de patron de PMU.",
+    "😂 Camille dit ‘frérot’ mieux que les frères."
   ]
+};
 
+let selectedFighters = [];
 
+function selectFighter(cardElement, name) {
 
-    };
+  if (selectedFighters.includes(name)) {
+    selectedFighters = selectedFighters.filter(f => f !== name);
+    cardElement.classList.remove('selected');
+    return;
+  }
 
-    // --- GESTION DU CLASH ---
-    let selectedFighters = [];
+  if (selectedFighters.length < 2) {
+    selectedFighters.push(name);
+    cardElement.classList.add('selected');
+  }
 
-    function selectFighter(cardElement, name) {
-      if (selectedFighters.includes(name)) {
-        selectedFighters = selectedFighters.filter(fighter => fighter !== name);
-        cardElement.classList.remove('selected');
-        return;
-      }
+  if (selectedFighters.length === 2) {
 
-      if (selectedFighters.length < 2) {
-        selectedFighters.push(name);
-        cardElement.classList.add('selected');
-      }
+    const f1 = selectedFighters[0];
+    const f2 = selectedFighters[1];
 
-      if (selectedFighters.length === 2) {
-        // Préparation des répliques
-        const f1 = selectedFighters[0];
-        const f2 = selectedFighters[1];
-        
-        const q1 = allQuotes[f1][Math.floor(Math.random() * allQuotes[f1].length)];
-        const q2 = allQuotes[f2][Math.floor(Math.random() * allQuotes[f2].length)];
+    const q1 = allQuotes[f1][Math.floor(Math.random() * allQuotes[f1].length)];
+    const q2 = allQuotes[f2][Math.floor(Math.random() * allQuotes[f2].length)];
 
-        // Sauvegarde dans le navigateur pour la page clash
-        window.location.href =
-  `clash.html?p1=${encodeURIComponent(f1)}&p2=${encodeURIComponent(f2)}&q1=${encodeURIComponent(q1)}&q2=${encodeURIComponent(q2)}`;
+    const url = `clash.html?p1=${encodeURIComponent(f1)}&p2=${encodeURIComponent(f2)}&q1=${encodeURIComponent(q1)}&q2=${encodeURIComponent(q2)}`;
 
-        setTimeout(() => {
-          // Redirection
-          window.location.href = `clash.html?p1=${f1}&p2=${f2}`;
-        }, 500); 
-      }
-    }
+    window.location.href = url;
+  }
+}
 
-    // --- BOUTONS PERSONNELS (Ancien fonctionnement) ---
-    function triggerAction(name) {
-      // Effets visuels personnalisés
-      if (name === 'Lilian') document.body.style.background = 'linear-gradient(135deg,#00c9ff,#92fe9d)';
-      if (name === 'Maud') document.body.style.background = 'linear-gradient(135deg,#ff758c,#ff7eb3)';
-      if (name === 'Camille') {
-        document.body.style.background = 'linear-gradient(135deg,#ffd700,#ffb347)';
-        const crown = document.createElement('div');
-        crown.innerHTML = '✨👑✨';
-        crown.style.position = 'fixed';
-        crown.style.top = '20px';
-        crown.style.left = '50%';
-        crown.style.transform = 'translateX(-50%)';
-        crown.style.fontSize = '4em';
-        crown.style.animation = 'bounce 1s infinite';
-        document.body.appendChild(crown);
-        setTimeout(() => crown.remove(), 3000);
-      }
-
-      // Alerte aléatoire
-      const quotes = allQuotes[name];
-      alert(quotes[Math.floor(Math.random() * quotes.length)]);
-    }
-
-
-
-
-
-
-
-
-  </script>
+function triggerAction(name) {
+  alert(allQuotes[name][Math.floor(Math.random() * allQuotes[name].length)]);
+}
+</script>
 
 </body>
 </html>
